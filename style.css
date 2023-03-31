@@ -9,6 +9,7 @@
     --vintagegreen:#b4e5af!important;
     --vintageyellow:#e7cf8a!important;
     --vintagebrown:#7a4f3b!important;
+    --vintageblue:#2C4E72!important;
 }
 
 header {
@@ -25,12 +26,17 @@ header h1 {
     font-size:5rem;
     color:var(--vintagebrown);
 }
+.imgme  {
+    position:relative;
+    max-width:20%;
+}
 .navi {
     /* font-size:2rem; */
     padding-top: 50px;
 }
 
-nav  {
+nav {
+    position:relative;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -82,6 +88,54 @@ main {
     border-bottom: 5px solid var(--vintagebrown);
 }
 
+
+
+
+.img1 {
+    max-width:100%;
+    margin:center;
+}
+.img1::hover {
+    opacity:50%;
+}
+.container {
+    background-color:var(--vintageblue);
+    padding-top:15px;
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .image-gallery > li {
+    flex-basis: 350px; /* width: 350px; */
+  }
+  
+  .image-gallery li img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 5px;
+  }
+  .image-gallery::after {
+    content: "";
+    flex-basis: 350px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
     display:flex;
     flex-direction: row;
@@ -107,16 +161,41 @@ footer article {
 
 /* media querys */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
     /* body {
       background-color: lightblue;
     } */
+    .imgme {
+        display:flex;
+        justify-content: flex-start;
+        max-width:30%;
+    }
+    nav , .navi {
+        display:flex;
+        align-content: center;
+        justify-content: flex-end;
+    }
+    .img2, .img3 {
+        max-width:50%;
+    }
+    .img4, .img5 {
+        max-width:50%;
+    }
 }
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 768px) {
     /* body {
       background-color: lightblue;
     } */
+    .img2 {
+        max-width:50%;
+    }
+    .img3, .img4 {
+        max-width:50%;
+    }
+    .img5 {
+        max-width:100%;
+    }
   }
 
 @media only screen and (max-width: 500px) {
